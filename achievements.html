@@ -1,0 +1,328 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Achievements | SARAVANAN R K</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&amp;family=Inter:wght@300;400;500;600&amp;family=JetBrains+Mono:wght@400;500&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<style>
+        body {
+            background-color: #131316;
+            background-image: 
+                radial-gradient(circle at 2px 2px, rgba(255,255,255,0.05) 1px, transparent 0);
+            background-size: 24px 24px;
+        }
+        .glass-card {
+            background: rgba(24, 24, 27, 0.6);
+            backdrop-filter: blur(12px);
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            border-bottom: 1px solid rgba(255, 255, 255, 0.02);
+        }
+        .technical-stroke {
+            box-shadow: 0 0 15px rgba(59, 130, 246, 0.1);
+        }
+    </style>
+<script id="tailwind-config">
+        tailwind.config = {
+          darkMode: "class",
+          theme: {
+            extend: {
+              "colors": {
+                      "secondary-fixed-dim": "#adc6ff",
+                      "primary-container": "#e2e2e2",
+                      "on-primary-fixed-variant": "#454747",
+                      "secondary-fixed": "#d8e2ff",
+                      "surface-variant": "#353438",
+                      "on-error": "#690005",
+                      "tertiary": "#ffffff",
+                      "surface-container-low": "#1b1b1e",
+                      "secondary-container": "#0566d9",
+                      "primary-fixed-dim": "#c6c6c7",
+                      "surface-tint": "#c6c6c7",
+                      "outline-variant": "#444748",
+                      "tertiary-fixed": "#acedff",
+                      "surface-container": "#1f1f22",
+                      "secondary": "#adc6ff",
+                      "on-primary-container": "#636565",
+                      "on-tertiary-fixed": "#001f26",
+                      "outline": "#8e9192",
+                      "on-tertiary": "#003640",
+                      "inverse-surface": "#e4e1e6",
+                      "background": "#131316",
+                      "on-secondary-fixed": "#001a42",
+                      "primary": "#ffffff",
+                      "error-container": "#93000a",
+                      "surface-dim": "#131316",
+                      "surface-container-high": "#2a2a2d",
+                      "inverse-primary": "#5d5f5f",
+                      "on-surface-variant": "#c4c7c8",
+                      "on-tertiary-container": "#006e81",
+                      "primary-fixed": "#e2e2e2",
+                      "on-background": "#e4e1e6",
+                      "surface-container-highest": "#353438",
+                      "surface": "#131316",
+                      "on-error-container": "#ffdad6",
+                      "on-surface": "#e4e1e6",
+                      "error": "#ffb4ab",
+                      "on-tertiary-fixed-variant": "#004e5c",
+                      "surface-container-lowest": "#0e0e11",
+                      "tertiary-container": "#acedff",
+                      "on-secondary-fixed-variant": "#004395",
+                      "on-primary": "#2f3131",
+                      "on-primary-fixed": "#1a1c1c",
+                      "inverse-on-surface": "#303033",
+                      "on-secondary-container": "#e6ecff",
+                      "surface-bright": "#39393c",
+                      "on-secondary": "#002e6a",
+                      "tertiary-fixed-dim": "#4cd7f6"
+              },
+              "borderRadius": {
+                      "DEFAULT": "0.125rem",
+                      "lg": "0.25rem",
+                      "xl": "0.5rem",
+                      "full": "0.75rem"
+              },
+              "spacing": {
+                      "margin-mobile": "20px",
+                      "unit": "4px",
+                      "margin-desktop": "64px",
+                      "gutter": "24px",
+                      "stack-sm": "8px",
+                      "stack-md": "16px",
+                      "container-max": "1280px",
+                      "stack-xs": "4px",
+                      "stack-xl": "64px",
+                      "stack-lg": "32px"
+              },
+              "fontFamily": {
+                      "display-lg-mobile": ["Space Grotesk"],
+                      "body-lg": ["Inter"],
+                      "headline-lg": ["Space Grotesk"],
+                      "display-lg": ["Space Grotesk"],
+                      "label-mono": ["JetBrains Mono"],
+                      "body-md": ["Inter"],
+                      "headline-md": ["Space Grotesk"],
+                      "label-sm": ["Inter"]
+              },
+              "fontSize": {
+                      "display-lg-mobile": ["40px", {"lineHeight": "1.2", "letterSpacing": "-0.01em", "fontWeight": "700"}],
+                      "body-lg": ["18px", {"lineHeight": "1.6", "fontWeight": "400"}],
+                      "headline-lg": ["32px", {"lineHeight": "1.3", "fontWeight": "600"}],
+                      "display-lg": ["64px", {"lineHeight": "1.1", "letterSpacing": "-0.02em", "fontWeight": "700"}],
+                      "label-mono": ["12px", {"lineHeight": "1.0", "letterSpacing": "0.05em", "fontWeight": "500"}],
+                      "body-md": ["16px", {"lineHeight": "1.6", "fontWeight": "400"}],
+                      "headline-md": ["24px", {"lineHeight": "1.4", "fontWeight": "500"}],
+                      "label-sm": ["13px", {"lineHeight": "1.2", "fontWeight": "500"}]
+              }
+            },
+          },
+        }
+      </script>
+</head>
+<body class="bg-background text-on-surface selection:bg-secondary-container selection:text-on-secondary-container">
+<!-- Top Navigation -->
+<nav class="fixed top-4 left-1/2 -translate-x-1/2 w-[90%] max-w-7xl rounded-full bg-surface/80 dark:bg-surface/80 backdrop-blur-xl border border-white/10 shadow-xl z-50 flex justify-between items-center px-8 py-4">
+<div class="font-display-lg text-display-lg-mobile md:text-headline-md text-primary tracking-tighter">SARAVANAN R K</div>
+<div class="hidden md:flex gap-gutter items-center">
+<a class="text-on-surface-variant font-medium hover:text-primary transition-all duration-300 hover:scale-105" href="#">Projects</a>
+<a class="text-on-surface-variant font-medium hover:text-primary transition-all duration-300 hover:scale-105" href="#">Experience</a>
+<a class="text-on-surface-variant font-medium hover:text-primary transition-all duration-300 hover:scale-105" href="#">Labs</a>
+<a class="text-on-surface-variant font-medium hover:text-primary transition-all duration-300 hover:scale-105" href="#">About</a>
+<a class="text-on-surface-variant font-medium hover:text-primary transition-all duration-300 hover:scale-105" href="#">Contact</a>
+</div>
+<button class="bg-primary text-on-primary px-6 py-2 rounded-full font-bold hover:scale-105 transition-transform active:scale-95">Hire Me</button>
+</nav>
+<main class="max-w-7xl mx-auto px-margin-mobile md:px-margin-desktop pt-stack-xl mt-24">
+<!-- Hero Section & Key Metrics -->
+<header class="mb-stack-xl">
+<div class="flex flex-col md:flex-row justify-between items-end gap-stack-lg border-b border-outline-variant pb-stack-lg">
+<div class="max-w-2xl">
+<span class="font-label-mono text-label-mono text-secondary-container uppercase tracking-widest mb-stack-xs block">Engineering Excellence</span>
+<h1 class="font-display-lg text-display-lg-mobile md:text-display-lg text-primary mb-stack-md">Strategic Achievements &amp; Technical Impact</h1>
+<p class="font-body-lg text-on-surface-variant">Bridging healthcare innovation, AI systems engineering, and leadership as CEO &amp; CTO of AirTon. A documented history of research and execution.</p>
+</div>
+<div class="flex gap-gutter w-full md:w-auto">
+<div class="flex flex-col">
+<span class="font-display-lg text-headline-lg text-primary">10+</span>
+<span class="font-label-mono text-label-mono text-outline uppercase">Active Projects</span>
+</div>
+<div class="flex flex-col">
+<span class="font-display-lg text-headline-lg text-primary">5+</span>
+<span class="font-label-mono text-label-mono text-outline uppercase">Research Papers</span>
+</div>
+<div class="flex flex-col">
+<span class="font-display-lg text-headline-lg text-primary">03</span>
+<span class="font-label-mono text-label-mono text-outline uppercase">Core Patents</span>
+</div>
+</div>
+</div>
+</header>
+<!-- Bento Grid Achievements -->
+<section class="grid grid-cols-1 md:grid-cols-12 gap-gutter mb-stack-xl">
+<!-- Leadership Card -->
+<div class="md:col-span-8 glass-card rounded-xl p-stack-lg relative overflow-hidden group hover:border-secondary-container transition-colors">
+<div class="relative z-10">
+<div class="flex justify-between items-start mb-stack-md">
+<span class="material-symbols-outlined text-primary text-4xl" style="font-variation-settings: 'FILL' 1;">rocket_launch</span>
+<span class="font-label-mono text-label-mono text-primary bg-secondary-container/20 px-3 py-1 rounded-full">REV: 2.4 - ACTIVE</span>
+</div>
+<h3 class="font-headline-lg text-primary mb-stack-sm">AirTon Leadership</h3>
+<p class="font-body-md text-on-surface-variant max-w-lg mb-stack-lg">Serving as both CEO &amp; CTO, spearheading the architectural vision for cross-disciplinary AI integration and next-gen hardware prototyping.</p>
+<div class="flex gap-stack-sm">
+<span class="font-label-mono text-label-mono border border-outline-variant px-3 py-1 rounded">STRATEGIC PLANNING</span>
+<span class="font-label-mono text-label-mono border border-outline-variant px-3 py-1 rounded">SYSTEM ARCHITECTURE</span>
+</div>
+</div>
+<div class="absolute right-[-10%] bottom-[-10%] opacity-10 group-hover:opacity-20 transition-opacity">
+<span class="material-symbols-outlined text-[200px]" style="font-variation-settings: 'FILL' 1;">architecture</span>
+</div>
+</div>
+<!-- Society Card -->
+<div class="md:col-span-4 glass-card rounded-xl p-stack-lg flex flex-col justify-between border-l-4 border-l-secondary-container">
+<div>
+<span class="font-label-mono text-label-mono text-secondary-container mb-stack-sm block">IEEE CAS SOCIETY</span>
+<h3 class="font-headline-md text-primary mb-stack-md">Coordinator &amp; Treasurer</h3>
+<p class="font-body-md text-on-surface-variant">Managing fiscal operations and technical coordination for elite engineering circuits and systems initiatives.</p>
+</div>
+<div class="mt-stack-lg pt-stack-md border-t border-outline-variant/30">
+<div class="flex items-center gap-stack-sm">
+<div class="w-2 h-2 rounded-full bg-secondary-container shadow-[0_0_8px_#0566d9]"></div>
+<span class="font-label-mono text-label-mono text-primary">STATUS: ELECTED</span>
+</div>
+</div>
+</div>
+<!-- Healthcare Card -->
+<div class="md:col-span-4 glass-card rounded-xl p-stack-lg group">
+<div class="aspect-video mb-stack-md overflow-hidden rounded bg-surface-container relative">
+<img alt="Healthcare innovation medical device" class="object-cover w-full h-full grayscale group-hover:grayscale-0 transition-all duration-500" data-alt="A macro close-up of a futuristic medical sensor device featuring brushed metal casing and glowing blue fiber-optic indicators. The scene is set in a sterile, dark engineering laboratory with bokeh highlights from background equipment. The aesthetic is ultra-precise and technical, emphasizing the intersection of engineering and healthcare technology." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDDMT4Iac28NOPWVlzSlwOGTGrAejnOc5pLk0OdpzQbuTSumlLS-4yMI3VSg7mMpGDY9lzW4IWbRG9fjeVNatWm5hyI-6IiUq9S-8z370R6wgrE7ESwlfxDJFfUXRarouQc4v7_7OtFBlE66PIa_jzNglzcFby2qFhWmf2zz0JYI87vzZx2re0BNd8lYVDp6d0_SDMgFXpun9M7c4Rx8a-dxL-f4egl94l5OTHNyXc7sOBQXQ-AkO8DrUGSWAzCq16GFHchvnq43I4"/>
+</div>
+<h3 class="font-headline-md text-primary mb-stack-sm">Healthcare Innovation</h3>
+<p class="font-body-md text-on-surface-variant">Developing AI-driven diagnostic tools and hardware-software bridges for real-time patient monitoring systems.</p>
+</div>
+<!-- AI Engineering Card -->
+<div class="md:col-span-8 glass-card rounded-xl p-stack-lg flex flex-col md:flex-row gap-stack-lg">
+<div class="flex-1">
+<h3 class="font-headline-md text-primary mb-stack-md">AI Engineering Systems</h3>
+<ul class="space-y-stack-sm">
+<li class="flex items-start gap-stack-sm">
+<span class="material-symbols-outlined text-secondary-container text-sm mt-1">check_circle</span>
+<span class="font-body-md text-on-surface">Scalable Neural Architectures for edge computing.</span>
+</li>
+<li class="flex items-start gap-stack-sm">
+<span class="material-symbols-outlined text-secondary-container text-sm mt-1">check_circle</span>
+<span class="font-body-md text-on-surface">Optimized ML pipelines for industrial IoT automation.</span>
+</li>
+<li class="flex items-start gap-stack-sm">
+<span class="material-symbols-outlined text-secondary-container text-sm mt-1">check_circle</span>
+<span class="font-body-md text-on-surface">Computer Vision integration for quality control protocols.</span>
+</li>
+</ul>
+</div>
+<div class="flex-1 bg-surface-container-high rounded p-stack-md border border-white/5 font-label-mono text-[10px] leading-relaxed text-on-surface-variant opacity-50 select-none">
+<div class="mb-2">// SYSTEM_DIAGNOSTICS_v4.2</div>
+<div class="text-secondary-container">0x7F4A: LOAD_MODEL(HEALTHCARE_CNN)</div>
+<div>0x7F4B: INITIALIZING_NEURAL_WEIGHTS...</div>
+<div>0x7F4C: ACTIVATING_SENSOR_ARRAY[0..15]</div>
+<div class="text-primary">0x7F4D: SYNC_COMPLETE. LATENCY: 2.4ms</div>
+<div>[********************************] 100%</div>
+</div>
+</div>
+</section>
+<!-- Technical Timeline -->
+<section class="mb-stack-xl">
+<h2 class="font-headline-lg text-primary mb-stack-xl flex items-center gap-stack-sm">
+<span class="material-symbols-outlined">timeline</span>
+                Technical Event Participation
+            </h2>
+<div class="space-y-0">
+<!-- Timeline Item 1 -->
+<div class="grid grid-cols-1 md:grid-cols-12 gap-gutter group cursor-default">
+<div class="md:col-span-2 py-stack-md">
+<span class="font-label-mono text-label-mono text-secondary-container">Q4 2023</span>
+</div>
+<div class="md:col-span-1 hidden md:flex flex-col items-center">
+<div class="w-3 h-3 rounded-full border-2 border-primary bg-background z-10"></div>
+<div class="w-px h-full bg-outline-variant group-last:bg-transparent"></div>
+</div>
+<div class="md:col-span-9 pb-stack-xl border-b border-outline-variant/30 group-hover:border-primary transition-colors">
+<h4 class="font-headline-md text-primary">Global AI Summit: Emerging Architectures</h4>
+<p class="font-body-md text-on-surface-variant mt-stack-xs">Lead presenter on cross-domain AI integration in low-power hardware environments. Explored the future of silicon-bound neural networks.</p>
+<div class="mt-stack-sm flex gap-stack-sm">
+<span class="text-[10px] font-label-mono px-2 py-1 bg-surface-container border border-outline-variant rounded">SPEAKER</span>
+<span class="text-[10px] font-label-mono px-2 py-1 bg-surface-container border border-outline-variant rounded">HARDWARE AI</span>
+</div>
+</div>
+</div>
+<!-- Timeline Item 2 -->
+<div class="grid grid-cols-1 md:grid-cols-12 gap-gutter group cursor-default">
+<div class="md:col-span-2 py-stack-md">
+<span class="font-label-mono text-label-mono text-secondary-container">Q2 2023</span>
+</div>
+<div class="md:col-span-1 hidden md:flex flex-col items-center">
+<div class="w-3 h-3 rounded-full border-2 border-outline bg-background z-10 group-hover:border-primary"></div>
+<div class="w-px h-full bg-outline-variant group-last:bg-transparent"></div>
+</div>
+<div class="md:col-span-9 pb-stack-xl border-b border-outline-variant/30 group-hover:border-primary transition-colors">
+<h4 class="font-headline-md text-primary">IEEE Circuits and Systems Symposium</h4>
+<p class="font-body-md text-on-surface-variant mt-stack-xs">Technical committee contributor for high-precision instrumentation circuits. Orchestrated the regional treasurer's audit for 15+ student chapters.</p>
+<div class="mt-stack-sm flex gap-stack-sm">
+<span class="text-[10px] font-label-mono px-2 py-1 bg-surface-container border border-outline-variant rounded">COORDINATION</span>
+</div>
+</div>
+</div>
+<!-- Timeline Item 3 -->
+<div class="grid grid-cols-1 md:grid-cols-12 gap-gutter group cursor-default">
+<div class="md:col-span-2 py-stack-md">
+<span class="font-label-mono text-label-mono text-secondary-container">2022 - 2023</span>
+</div>
+<div class="md:col-span-1 hidden md:flex flex-col items-center">
+<div class="w-3 h-3 rounded-full border-2 border-outline bg-background z-10 group-hover:border-primary"></div>
+<div class="w-px h-full bg-transparent"></div>
+</div>
+<div class="md:col-span-9 pb-stack-xl group-hover:border-primary transition-colors">
+<h4 class="font-headline-md text-primary">Healthcare Tech Accelerator</h4>
+<p class="font-body-md text-on-surface-variant mt-stack-xs">Successfully piloted two AI-driven patient triage prototypes within regional hospital frameworks. Awarded 'Technical Pioneer' citation.</p>
+<div class="mt-stack-sm flex gap-stack-sm">
+<span class="text-[10px] font-label-mono px-2 py-1 bg-surface-container border border-outline-variant rounded">INNOVATION</span>
+<span class="text-[10px] font-label-mono px-2 py-1 bg-surface-container border border-outline-variant rounded">BIOMEDICAL</span>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- CTA Section -->
+<section class="mb-stack-xl py-stack-xl border-t border-outline-variant">
+<div class="glass-card rounded-xl p-stack-xl text-center flex flex-col items-center">
+<h2 class="font-headline-lg text-primary mb-stack-md">Ready for the Next Engineering Challenge?</h2>
+<p class="font-body-lg text-on-surface-variant max-w-2xl mb-stack-lg">I am currently open to high-impact roles in AI Systems Architecture, CTO advisory, and technical leadership for R&amp;D-focused organizations.</p>
+<div class="flex flex-col md:flex-row gap-gutter">
+<button class="bg-primary text-on-primary px-8 py-3 rounded font-bold hover:scale-105 transition-transform flex items-center gap-stack-sm">
+                        Request Technical Dossier
+                        <span class="material-symbols-outlined">download</span>
+</button>
+<button class="border border-outline px-8 py-3 rounded text-primary hover:bg-surface-container transition-colors">
+                        Inquire for Leadership Roles
+                    </button>
+</div>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="w-full border-t border-outline-variant bg-surface-container-lowest">
+<div class="max-w-7xl mx-auto px-margin-desktop py-stack-xl flex flex-col md:flex-row justify-between items-center gap-gutter">
+<div class="flex flex-col items-center md:items-start">
+<div class="font-headline-md text-headline-md text-primary mb-stack-xs uppercase tracking-tighter">SARAVANAN R K</div>
+<div class="font-body-md text-body-md font-label-mono text-label-mono text-on-surface-variant">© 2024 Saravanan R K. Engineered for Excellence.</div>
+</div>
+<div class="flex gap-stack-lg">
+<a class="text-on-surface-variant hover:text-secondary-container transition-colors hover:translate-y-[-2px]" href="#">LinkedIn</a>
+<a class="text-on-surface-variant hover:text-secondary-container transition-colors hover:translate-y-[-2px]" href="#">GitHub</a>
+<a class="text-on-surface-variant hover:text-secondary-container transition-colors hover:translate-y-[-2px]" href="#">ResearchGate</a>
+<a class="text-on-surface-variant hover:text-secondary-container transition-colors hover:translate-y-[-2px]" href="#">Email</a>
+</div>
+</div>
+</footer>
+</body></html>

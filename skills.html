@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;family=Space+Grotesk:wght@500;600;700&amp;family=JetBrains+Mono:wght@500&amp;family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .grid-pattern {
+            background-image: radial-gradient(circle, rgba(39, 39, 42, 0.5) 1px, transparent 1px);
+            background-size: 24px 24px;
+        }
+        .glass-card {
+            background: rgba(24, 24, 27, 0.6);
+            backdrop-filter: blur(12px);
+            border: 1px solid rgba(255, 255, 255, 0.08);
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+        .glass-card:hover {
+            border-color: rgba(59, 130, 246, 0.5);
+            box-shadow: 0 0 20px rgba(59, 130, 246, 0.15);
+            transform: translateY(-4px);
+        }
+        .inner-glow {
+            box-shadow: inset 0 1px 1px rgba(255, 255, 255, 0.1);
+        }
+    </style>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "secondary-fixed-dim": "#adc6ff",
+                        "primary-container": "#e2e2e2",
+                        "on-primary-fixed-variant": "#454747",
+                        "secondary-fixed": "#d8e2ff",
+                        "surface-variant": "#353438",
+                        "on-error": "#690005",
+                        "tertiary": "#ffffff",
+                        "surface-container-low": "#1b1b1e",
+                        "secondary-container": "#0566d9",
+                        "primary-fixed-dim": "#c6c6c7",
+                        "surface-tint": "#c6c6c7",
+                        "outline-variant": "#444748",
+                        "tertiary-fixed": "#acedff",
+                        "surface-container": "#1f1f22",
+                        "secondary": "#adc6ff",
+                        "on-primary-container": "#636565",
+                        "on-tertiary-fixed": "#001f26",
+                        "outline": "#8e9192",
+                        "on-tertiary": "#003640",
+                        "inverse-surface": "#e4e1e6",
+                        "background": "#131316",
+                        "on-secondary-fixed": "#001a42",
+                        "primary": "#ffffff",
+                        "error-container": "#93000a",
+                        "surface-dim": "#131316",
+                        "surface-container-high": "#2a2a2d",
+                        "inverse-primary": "#5d5f5f",
+                        "on-surface-variant": "#c4c7c8",
+                        "on-tertiary-container": "#006e81",
+                        "primary-fixed": "#e2e2e2",
+                        "on-background": "#e4e1e6",
+                        "surface-container-highest": "#353438",
+                        "surface": "#131316",
+                        "on-error-container": "#ffdad6",
+                        "on-surface": "#e4e1e6",
+                        "error": "#ffb4ab",
+                        "on-tertiary-fixed-variant": "#004e5c",
+                        "surface-container-lowest": "#0e0e11",
+                        "tertiary-container": "#acedff",
+                        "on-secondary-fixed-variant": "#004395",
+                        "on-primary": "#2f3131",
+                        "on-primary-fixed": "#1a1c1c",
+                        "inverse-on-surface": "#303033",
+                        "on-secondary-container": "#e6ecff",
+                        "surface-bright": "#39393c",
+                        "on-secondary": "#002e6a",
+                        "tertiary-fixed-dim": "#4cd7f6"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.125rem",
+                        "lg": "0.25rem",
+                        "xl": "0.5rem",
+                        "full": "0.75rem"
+                    },
+                    "spacing": {
+                        "margin-mobile": "20px",
+                        "unit": "4px",
+                        "margin-desktop": "64px",
+                        "gutter": "24px",
+                        "stack-sm": "8px",
+                        "stack-md": "16px",
+                        "container-max": "1280px",
+                        "stack-xs": "4px",
+                        "stack-xl": "64px",
+                        "stack-lg": "32px"
+                    },
+                    "fontFamily": {
+                        "display-lg-mobile": ["Space Grotesk"],
+                        "body-lg": ["Inter"],
+                        "headline-lg": ["Space Grotesk"],
+                        "display-lg": ["Space Grotesk"],
+                        "label-mono": ["JetBrains Mono"],
+                        "body-md": ["Inter"],
+                        "headline-md": ["Space Grotesk"],
+                        "label-sm": ["Inter"]
+                    },
+                    "fontSize": {
+                        "display-lg-mobile": ["40px", {"lineHeight": "1.2", "letterSpacing": "-0.01em", "fontWeight": "700"}],
+                        "body-lg": ["18px", {"lineHeight": "1.6", "fontWeight": "400"}],
+                        "headline-lg": ["32px", {"lineHeight": "1.3", "fontWeight": "600"}],
+                        "display-lg": ["64px", {"lineHeight": "1.1", "letterSpacing": "-0.02em", "fontWeight": "700"}],
+                        "label-mono": ["12px", {"lineHeight": "1.0", "letterSpacing": "0.05em", "fontWeight": "500"}],
+                        "body-md": ["16px", {"lineHeight": "1.6", "fontWeight": "400"}],
+                        "headline-md": ["24px", {"lineHeight": "1.4", "fontWeight": "500"}],
+                        "label-sm": ["13px", {"lineHeight": "1.2", "fontWeight": "500"}]
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="bg-background text-on-surface selection:bg-secondary-container selection:text-white">
+<!-- Top Navigation Bar -->
+<nav class="fixed top-4 left-1/2 -translate-x-1/2 w-[90%] max-w-7xl rounded-full bg-surface/80 dark:bg-surface/80 backdrop-blur-xl border border-white/10 shadow-xl z-50 flex justify-between items-center px-8 py-4">
+<div class="font-display-lg text-[24px] text-primary tracking-tighter uppercase">SARAVANAN R K</div>
+<div class="hidden md:flex gap-8 items-center">
+<a class="text-on-surface-variant font-medium hover:text-primary transition-all duration-300" href="#">Projects</a>
+<a class="text-on-surface-variant font-medium hover:text-primary transition-all duration-300" href="#">Experience</a>
+<a class="text-primary font-bold border-b-2 border-primary pb-1" href="#">Labs</a>
+<a class="text-on-surface-variant font-medium hover:text-primary transition-all duration-300" href="#">About</a>
+<a class="text-on-surface-variant font-medium hover:text-primary transition-all duration-300" href="#">Contact</a>
+</div>
+<button class="bg-primary text-on-primary px-6 py-2 rounded-full font-bold hover:scale-105 active:scale-95 transition-transform duration-200">Hire Me</button>
+</nav>
+<!-- Main Content Area -->
+<main class="min-h-screen pt-40 pb-stack-xl px-margin-mobile md:px-margin-desktop grid-pattern">
+<!-- Header Section -->
+<header class="max-w-7xl mx-auto mb-stack-xl">
+<div class="flex items-center gap-stack-sm mb-stack-md">
+<span class="w-3 h-3 rounded-full bg-secondary shadow-[0_0_8px_rgba(173,198,255,0.8)]"></span>
+<span class="font-label-mono text-label-mono text-secondary tracking-[0.2em] uppercase">Instrumentation &amp; R&amp;D</span>
+</div>
+<h1 class="font-display-lg text-display-lg text-primary max-w-4xl">Technical Competency <br/><span class="text-on-surface-variant">Architecture &amp; Systems.</span></h1>
+</header>
+<!-- Bento Grid Skills Section -->
+<div class="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-12 gap-gutter">
+<!-- Programming (Large Card) -->
+<div class="md:col-span-8 glass-card p-stack-lg flex flex-col justify-between group">
+<div>
+<div class="flex justify-between items-start mb-stack-lg">
+<span class="material-symbols-outlined text-secondary text-4xl" style="font-variation-settings: 'FILL' 0;">terminal</span>
+<div class="text-right">
+<p class="font-label-mono text-label-mono text-on-surface-variant">REV: 4.0.1</p>
+<p class="font-label-mono text-label-mono text-secondary">STATUS: MASTERED</p>
+</div>
+</div>
+<h2 class="font-headline-lg text-headline-lg text-primary mb-stack-md">Programming</h2>
+<p class="font-body-md text-body-md text-on-surface-variant max-w-xl">
+                        Foundational architecture in low-level languages and modern asynchronous environments. Specialized in memory-safe execution and high-performance algorithms.
+                    </p>
+</div>
+<div class="flex flex-wrap gap-stack-md mt-stack-xl">
+<div class="px-4 py-2 border border-outline-variant rounded-lg font-label-mono text-primary flex items-center gap-2 group-hover:border-secondary transition-colors">
+<span class="w-2 h-2 bg-secondary rounded-full"></span> C / C++
+                    </div>
+<div class="px-4 py-2 border border-outline-variant rounded-lg font-label-mono text-primary flex items-center gap-2 group-hover:border-secondary transition-colors">
+<span class="w-2 h-2 bg-secondary rounded-full"></span> Python
+                    </div>
+<div class="px-4 py-2 border border-outline-variant rounded-lg font-label-mono text-primary flex items-center gap-2 group-hover:border-secondary transition-colors">
+<span class="w-2 h-2 bg-secondary rounded-full"></span> TypeScript
+                    </div>
+<div class="px-4 py-2 border border-outline-variant rounded-lg font-label-mono text-primary flex items-center gap-2 group-hover:border-secondary transition-colors">
+<span class="w-2 h-2 bg-secondary rounded-full"></span> Assembly
+                    </div>
+</div>
+</div>
+<!-- Embedded Systems (Square Card) -->
+<div class="md:col-span-4 glass-card p-stack-lg group">
+<div class="flex justify-between mb-stack-lg">
+<span class="material-symbols-outlined text-secondary text-4xl">developer_board</span>
+<span class="font-label-mono text-label-mono text-on-surface-variant">HW-DEV</span>
+</div>
+<h2 class="font-headline-md text-headline-md text-primary mb-stack-sm">Embedded Systems</h2>
+<p class="font-body-md text-body-md text-on-surface-variant mb-stack-lg">Real-time processing on ARM Cortex architectures and sensory integration.</p>
+<ul class="space-y-stack-sm font-label-mono text-label-mono text-on-surface-variant">
+<li class="flex items-center gap-2"><span class="material-symbols-outlined text-sm">chevron_right</span> STM32 Ecosystem</li>
+<li class="flex items-center gap-2"><span class="material-symbols-outlined text-sm">chevron_right</span> PCB Layout (Altium)</li>
+<li class="flex items-center gap-2"><span class="material-symbols-outlined text-sm">chevron_right</span> Sensor Fusion</li>
+</ul>
+</div>
+<!-- AI & Software (Tall Card) -->
+<div class="md:col-span-4 md:row-span-2 glass-card p-stack-lg flex flex-col justify-between overflow-hidden relative group">
+<div class="absolute inset-0 opacity-10 bg-gradient-to-br from-secondary to-transparent pointer-events-none"></div>
+<div class="relative z-10">
+<span class="material-symbols-outlined text-secondary text-4xl mb-stack-lg">neurology</span>
+<h2 class="font-headline-lg text-headline-lg text-primary mb-stack-md">AI &amp; Software</h2>
+<p class="font-body-md text-body-md text-on-surface-variant mb-stack-lg">Deploying Large Language Models and autonomous agentic workflows for engineering automation.</p>
+</div>
+<div class="relative z-10 space-y-stack-md">
+<div class="bg-surface-container p-4 border border-outline-variant rounded">
+<p class="font-label-mono text-label-mono text-secondary mb-1">LLM Deployment</p>
+<div class="h-1 bg-surface-variant rounded-full overflow-hidden">
+<div class="h-full bg-secondary w-[90%]"></div>
+</div>
+</div>
+<div class="bg-surface-container p-4 border border-outline-variant rounded">
+<p class="font-label-mono text-label-mono text-secondary mb-1">AI Agents</p>
+<div class="h-1 bg-surface-variant rounded-full overflow-hidden">
+<div class="h-full bg-secondary w-[85%]"></div>
+</div>
+</div>
+<div class="bg-surface-container p-4 border border-outline-variant rounded">
+<p class="font-label-mono text-label-mono text-secondary mb-1">Automation</p>
+<div class="h-1 bg-surface-variant rounded-full overflow-hidden">
+<div class="h-full bg-secondary w-[95%]"></div>
+</div>
+</div>
+</div>
+</div>
+<!-- Electronics (Horizontal Card) -->
+<div class="md:col-span-8 glass-card p-stack-lg group">
+<div class="flex items-center justify-between mb-stack-lg">
+<div class="flex items-center gap-4">
+<span class="material-symbols-outlined text-secondary text-4xl">memory</span>
+<h2 class="font-headline-md text-headline-md text-primary">Electronics Engineering</h2>
+</div>
+<div class="flex gap-2">
+<span class="px-2 py-1 bg-secondary/10 border border-secondary/20 rounded text-[10px] font-label-mono text-secondary">ANALOG</span>
+<span class="px-2 py-1 bg-secondary/10 border border-secondary/20 rounded text-[10px] font-label-mono text-secondary">VLSI</span>
+</div>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-stack-lg">
+<div>
+<h3 class="font-label-mono text-label-mono text-primary uppercase mb-2">Semiconductors</h3>
+<p class="font-body-md text-body-md text-on-surface-variant">VLSI design, transistor-level logic optimization, and fabrication process awareness.</p>
+</div>
+<div>
+<h3 class="font-label-mono text-label-mono text-primary uppercase mb-2">Signal Processing</h3>
+<p class="font-body-md text-body-md text-on-surface-variant">High-speed digital signal integrity and precision analog circuit design.</p>
+</div>
+</div>
+</div>
+<!-- Tools & Research (Shared Row) -->
+<div class="md:col-span-4 glass-card p-stack-lg group border-r-0">
+<span class="material-symbols-outlined text-secondary text-3xl mb-stack-md">construction</span>
+<h2 class="font-headline-md text-headline-md text-primary mb-stack-sm">Technical Stack</h2>
+<div class="flex flex-wrap gap-2 mt-4">
+<span class="bg-surface-container-high px-3 py-1 rounded-full font-label-mono text-[11px] border border-outline-variant">MATLAB</span>
+<span class="bg-surface-container-high px-3 py-1 rounded-full font-label-mono text-[11px] border border-outline-variant">GIT / CI/CD</span>
+<span class="bg-surface-container-high px-3 py-1 rounded-full font-label-mono text-[11px] border border-outline-variant">DOCKER</span>
+<span class="bg-surface-container-high px-3 py-1 rounded-full font-label-mono text-[11px] border border-outline-variant">LINUX</span>
+</div>
+</div>
+<div class="md:col-span-4 glass-card p-stack-lg group relative overflow-hidden">
+<div class="absolute top-0 right-0 p-4">
+<span class="material-symbols-outlined text-on-surface-variant/20 text-6xl">verified</span>
+</div>
+<span class="material-symbols-outlined text-secondary text-3xl mb-stack-md">workspace_premium</span>
+<h2 class="font-headline-md text-headline-md text-primary mb-stack-sm">Research &amp; Leadership</h2>
+<p class="font-body-md text-body-md text-on-surface-variant">IEEE published researcher and lead engineer for multi-disciplinary hardware teams.</p>
+<div class="mt-stack-md flex items-center gap-2 text-secondary font-label-mono text-label-mono">
+<span class="material-symbols-outlined text-sm">article</span> PUBLICATIONS (3)
+                </div>
+</div>
+</div>
+<!-- Featured Technical Visual -->
+<section class="max-w-7xl mx-auto mt-stack-xl glass-card overflow-hidden border-none p-0 flex flex-col md:flex-row h-[400px]">
+<div class="md:w-1/2 p-stack-xl flex flex-col justify-center">
+<h2 class="font-headline-lg text-headline-lg text-primary mb-stack-md">R&amp;D Lab Environment</h2>
+<p class="font-body-md text-body-md text-on-surface-variant mb-stack-lg">Where theoretical physics meets industrial application. Our labs are equipped for full-stack prototype development from silicon to software.</p>
+<div class="flex gap-stack-md">
+<div class="flex flex-col">
+<span class="font-display-lg text-[32px] text-primary">12+</span>
+<span class="font-label-mono text-label-mono text-on-surface-variant uppercase">Projects Live</span>
+</div>
+<div class="w-px h-12 bg-outline-variant"></div>
+<div class="flex flex-col">
+<span class="font-display-lg text-[32px] text-primary">04</span>
+<span class="font-label-mono text-label-mono text-on-surface-variant uppercase">Patents Pending</span>
+</div>
+</div>
+</div>
+<div class="md:w-1/2 relative bg-surface-container-high">
+<img class="w-full h-full object-cover grayscale opacity-50 mix-blend-screen" data-alt="A high-tech electronics laboratory with multiple oscilloscopes displaying complex waveforms and a robotic arm in the background. The scene is illuminated by cool blue neon lights and clinical white overhead lighting, creating a professional and futuristic atmosphere. The focus is on precision engineering and advanced research tools, reflecting a high-end R&amp;D laboratory aesthetic." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCo9upwq90jDiUje5iTzQh22vnRnXQyMEybbgeDEoWpXIoqvvswoXxAnPRAVX_ThseoS5bCV9Otye6CMSQKyx0lc-U0ITGDBpJyjH19lg4vJxHLJP3ryRtuTgD_TakG6ZIS48IavWNk_7H2bcroNJjI7Rcs6W-K_k9jd7ZaVoFd5L351udWYJJGAi_nBcZL1wXUWqYCTUhYGrPk4Bbm4zC_1AjbETwZMotAwQQ7hc-_q0teQCONYnQqmJMlKnDdND_fJ1MO07LkJYc"/>
+<div class="absolute inset-0 bg-gradient-to-r from-background to-transparent"></div>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="w-full border-t border-outline-variant bg-surface-container-lowest py-stack-xl px-margin-mobile md:px-margin-desktop">
+<div class="max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-center gap-gutter">
+<div class="flex flex-col items-center md:items-start gap-stack-sm">
+<span class="font-headline-md text-headline-md text-primary uppercase tracking-tighter">SARAVANAN R K</span>
+<p class="font-label-mono text-label-mono text-on-surface-variant">© 2024 Saravanan R K. Engineered for Excellence.</p>
+</div>
+<div class="flex gap-8">
+<a class="text-on-surface-variant font-label-mono text-label-mono hover:text-secondary-container transition-colors hover:translate-y-[-2px] transition-transform" href="#">LinkedIn</a>
+<a class="text-on-surface-variant font-label-mono text-label-mono hover:text-secondary-container transition-colors hover:translate-y-[-2px] transition-transform" href="#">GitHub</a>
+<a class="text-on-surface-variant font-label-mono text-label-mono hover:text-secondary-container transition-colors hover:translate-y-[-2px] transition-transform" href="#">ResearchGate</a>
+<a class="text-on-surface-variant font-label-mono text-label-mono hover:text-secondary-container transition-colors hover:translate-y-[-2px] transition-transform" href="#">Email</a>
+</div>
+</div>
+</footer>
+</body></html>
