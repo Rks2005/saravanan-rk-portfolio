@@ -1,0 +1,503 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link rel="shortcut icon" href="icon.png" type="image/x-icon">
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&amp;family=JetBrains+Mono:wght@500&amp;family=Space+Grotesk:wght@500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "secondary-fixed-dim": "#adc6ff",
+                    "primary-container": "#e2e2e2",
+                    "on-primary-fixed-variant": "#454747",
+                    "secondary-fixed": "#d8e2ff",
+                    "surface-variant": "#353438",
+                    "on-error": "#690005",
+                    "tertiary": "#ffffff",
+                    "surface-container-low": "#1b1b1e",
+                    "secondary-container": "#0566d9",
+                    "primary-fixed-dim": "#c6c6c7",
+                    "surface-tint": "#c6c6c7",
+                    "outline-variant": "#444748",
+                    "tertiary-fixed": "#acedff",
+                    "surface-container": "#1f1f22",
+                    "secondary": "#adc6ff",
+                    "on-primary-container": "#636565",
+                    "on-tertiary-fixed": "#001f26",
+                    "outline": "#8e9192",
+                    "on-tertiary": "#003640",
+                    "inverse-surface": "#e4e1e6",
+                    "background": "#131316",
+                    "on-secondary-fixed": "#001a42",
+                    "primary": "#ffffff",
+                    "error-container": "#93000a",
+                    "surface-dim": "#131316",
+                    "surface-container-high": "#2a2a2d",
+                    "inverse-primary": "#5d5f5f",
+                    "on-surface-variant": "#c4c7c8",
+                    "on-tertiary-container": "#006e81",
+                    "primary-fixed": "#e2e2e2",
+                    "on-background": "#e4e1e6",
+                    "surface-container-highest": "#353438",
+                    "surface": "#131316",
+                    "on-error-container": "#ffdad6",
+                    "on-surface": "#e4e1e6",
+                    "error": "#ffb4ab",
+                    "on-tertiary-fixed-variant": "#004e5c",
+                    "surface-container-lowest": "#0e0e11",
+                    "tertiary-container": "#acedff",
+                    "on-secondary-fixed-variant": "#004395",
+                    "on-primary": "#2f3131",
+                    "on-primary-fixed": "#1a1c1c",
+                    "inverse-on-surface": "#303033",
+                    "on-secondary-container": "#e6ecff",
+                    "surface-bright": "#39393c",
+                    "on-secondary": "#002e6a",
+                    "tertiary-fixed-dim": "#4cd7f6"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0.125rem",
+                    "lg": "0.25rem",
+                    "xl": "0.5rem",
+                    "full": "0.75rem"
+            },
+            "spacing": {
+                    "margin-mobile": "20px",
+                    "unit": "4px",
+                    "margin-desktop": "64px",
+                    "gutter": "24px",
+                    "stack-sm": "8px",
+                    "stack-md": "16px",
+                    "container-max": "1280px",
+                    "stack-xs": "4px",
+                    "stack-xl": "64px",
+                    "stack-lg": "32px"
+            },
+            "fontFamily": {
+                    "display-lg-mobile": ["Space Grotesk"],
+                    "body-lg": ["Inter"],
+                    "headline-lg": ["Space Grotesk"],
+                    "display-lg": ["Space Grotesk"],
+                    "label-mono": ["JetBrains Mono"],
+                    "body-md": ["Inter"],
+                    "headline-md": ["Space Grotesk"],
+                    "label-sm": ["Inter"]
+            },
+            "fontSize": {
+                    "display-lg-mobile": ["40px", {"lineHeight": "1.2", "letterSpacing": "-0.01em", "fontWeight": "700"}],
+                    "body-lg": ["18px", {"lineHeight": "1.6", "fontWeight": "400"}],
+                    "headline-lg": ["32px", {"lineHeight": "1.3", "fontWeight": "600"}],
+                    "display-lg": ["64px", {"lineHeight": "1.1", "letterSpacing": "-0.02em", "fontWeight": "700"}],
+                    "label-mono": ["12px", {"lineHeight": "1.0", "letterSpacing": "0.05em", "fontWeight": "500"}],
+                    "body-md": ["16px", {"lineHeight": "1.6", "fontWeight": "400"}],
+                    "headline-md": ["24px", {"lineHeight": "1.4", "fontWeight": "500"}],
+                    "label-sm": ["13px", {"lineHeight": "1.2", "fontWeight": "500"}]
+            }
+          },
+        },
+      }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .technical-grid {
+            background-image: radial-gradient(circle at 1px 1px, rgba(255, 255, 255, 0.05) 1px, transparent 0);
+            background-size: 24px 24px;
+        }
+        .glass-panel {
+            background: rgba(27, 27, 30, 0.6);
+            backdrop-filter: blur(12px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+    </style>
+</head>
+<body class="bg-background text-on-background font-body-md selection:bg-secondary-container selection:text-white technical-grid">
+<!-- Top Navigation Bar -->
+<nav class="fixed top-4 left-1/2 -translate-x-1/2 w-[90%] max-w-7xl rounded-full bg-surface/80 dark:bg-surface/80 backdrop-blur-xl border border-white/10 shadow-xl flex justify-between items-center px-8 py-4 z-50">
+<div class="font-display-lg text-display-lg-mobile text-primary tracking-tighter">SARAVANAN R K</div>
+<div class="hidden md:flex gap-gutter items-center">
+  <a class="text-on-surface-variant font-medium hover:text-primary transition-all duration-300 hover:scale-105" href="projects.html">
+    Projects
+  </a>
+  <a class="text-on-surface-variant font-medium hover:text-primary transition-all duration-300 hover:scale-105" href="experience.html">
+    Experience
+  </a>
+  <a class="text-on-surface-variant font-medium hover:text-primary transition-all duration-300 hover:scale-105" href="#">
+    Labs
+  </a>
+  <a class="text-primary font-bold border-b-2 border-primary pb-1 transition-all duration-300 hover:scale-105" href="about.html">
+    About
+  </a>
+  <a class="text-on-surface-variant font-medium hover:text-primary transition-all duration-300 hover:scale-105" href="contact.html">
+    Contact
+  </a>
+</div>
+<button class="bg-primary text-on-primary px-6 py-2 rounded-full font-bold hover:scale-105 active:scale-95 transition-all">Hire Me</button>
+</nav>
+<main class="max-w-7xl mx-auto px-margin-desktop pt-[160px] pb-stack-xl">
+<!-- Header Section -->
+<header class="mb-stack-xl relative">
+<div class="flex items-center gap-stack-sm mb-stack-sm">
+<span class="w-2 h-2 rounded-full bg-secondary-container animate-pulse shadow-[0_0_8px_rgba(5,102,217,0.8)]"></span>
+<span class="font-label-mono text-label-mono text-secondary-container tracking-widest">CAREER TRAJECTORY</span>
+</div>
+<h1 class="font-display-lg text-display-lg text-primary mb-stack-md max-w-4xl">
+                Engineering Excellence &amp; <br/>Technical Leadership.
+            </h1>
+<p class="font-body-lg text-body-lg text-on-surface-variant max-w-2xl">
+                A track record of coordinating complex hardware-software integrations and leading cross-functional teams to deliver mission-critical R&amp;D solutions.
+            </p>
+</header>
+<!-- Experience Timeline -->
+<section class="relative">
+<!-- Central Vertical Line -->
+<div class="absolute left-0 md:left-1/2 top-0 bottom-0 w-[1px] bg-outline-variant/30 -translate-x-1/2"></div>
+
+ 
+<!-- Role 0 -->
+<div class="relative grid md:grid-cols-2 gap-gutter mb-stack-xl">
+  <div class="md:pl-12 pt-stack-sm order-2 md:col-start-2">
+  <div class="font-label-mono text-label-mono text-on-surface-variant mb-2">March 2026 — April 2026</div>
+  <h3 class="font-headline-md text-headline-md text-primary mb-1">VLSI Trainer</h3>
+  <p class="font-body-md text-body-md text-secondary-container font-semibold mb-stack-md underline decoration-2 underline-offset-4">PK Placement Services</p>
+  <div class="flex gap-2 flex-wrap">
+ 
+  <span class="px-3 py-1 border border-outline-variant rounded-full font-label-mono text-label-mono bg-surface-container">VLSI</span>
+  <span class="px-3 py-1 border border-outline-variant rounded-full font-label-mono text-label-mono bg-surface-container">EMBEDDED SYSTEMS</span>
+  </div>
+  </div>
+  
+  <!-- Center Point -->
+  <div class="absolute left-0 md:left-1/2 w-4 h-4 bg-primary border-4 border-background rounded-full -translate-x-1/2 mt-3 z-10 hidden md:block"></div>
+  <div class="order-1 md:pr-12">
+  <div class="glass-panel p-stack-lg rounded-xl hover:border-secondary-container/50 transition-colors">
+  <div class="flex justify-between items-start mb-stack-md">
+  <span class="material-symbols-outlined text-secondary-container text-4xl" data-icon="memory">memory</span>
+  <span class="font-label-mono text-label-mono text-outline">TYPE: CORE</span>
+
+  </div>
+  <ul class="space-y-stack-md text-on-surface-variant">
+  <li class="flex gap-stack-sm">
+  <span class="material-symbols-outlined text-primary text-sm mt-1" data-icon="arrow_forward">arrow_forward</span>
+  <span>Delivered training sessions on VLSI fundamentals, embedded systems concepts, and digital electronics for engineering students.</span>
+  </li>
+  <li class="flex gap-stack-sm">
+  <span class="material-symbols-outlined text-primary text-sm mt-1" data-icon="arrow_forward">arrow_forward</span>
+  <span>Guided students through core topics including semiconductor basics, logic design, microcontrollers, and system-level engineering concepts.</span>
+  </li>
+  </ul>
+  </div>
+  </div>
+  </div>
+
+
+<!-- Role 1 -->
+<div class="relative grid md:grid-cols-2 gap-gutter mb-stack-xl">
+<div class="md:text-right md:pr-12 pt-stack-sm order-2 md:order-1">
+<div class="font-label-mono text-label-mono text-on-surface-variant mb-2">January 2026 — Present</div>
+<h3 class="font-headline-md text-headline-md text-primary mb-1">IEEE YESIST12 2026 Ambassador</h3>
+<p class="font-body-md text-body-md text-secondary-container font-semibold mb-stack-md underline decoration-2 underline-offset-4">IEEE YESIST12</p>
+<div class="flex md:justify-end gap-2 flex-wrap">
+<span class="px-3 py-1 border border-outline-variant rounded-full font-label-mono text-label-mono bg-surface-container">INNOVATION ECOSYSTEMS</span>
+<span class="px-3 py-1 border border-outline-variant rounded-full font-label-mono text-label-mono bg-surface-container">TECHNICAL OUTREACH</span>
+</div>
+</div>
+<!-- Center Point -->
+<div class="absolute left-0 md:left-1/2 w-4 h-4 bg-primary border-4 border-background rounded-full -translate-x-1/2 mt-3 z-10 hidden md:block"></div>
+<div class="order-1 md:order-2 md:pl-12">
+<div class="glass-panel p-stack-lg rounded-xl hover:border-secondary-container/50 transition-colors group">
+<div class="flex justify-between items-start mb-stack-md">
+<span class="material-symbols-outlined text-secondary-container text-4xl" data-icon="leaderboard">leaderboard</span>
+<span class="font-label-mono text-label-mono text-outline">TYPE: MANAGEMENT</span>
+</div>
+<ul class="space-y-stack-md text-on-surface-variant">
+<li class="flex gap-stack-sm">
+<span class="material-symbols-outlined text-primary text-sm mt-1" data-icon="arrow_forward">arrow_forward</span>
+<span>Representing IEEE YESIST12 initiatives focused on sustainability, innovation, and emerging technologies.</span>
+</li>
+<li class="flex gap-stack-sm">
+<span class="material-symbols-outlined text-primary text-sm mt-1" data-icon="arrow_forward">arrow_forward</span>
+<span>Contributing to outreach programs, engineering engagement, and innovation-driven activities.</span>
+</li>
+<li class="flex gap-stack-sm">
+<span class="material-symbols-outlined text-primary text-sm mt-1" data-icon="arrow_forward">arrow_forward</span>
+<span>Collaborating with technical communities and student innovators across interdisciplinary domains.</span>
+</li>
+</ul>
+</div>
+</div>
+</div>
+
+
+<!-- Role 2 -->
+<div class="relative grid md:grid-cols-2 gap-gutter mb-stack-xl">
+<div class="md:pl-12 pt-stack-sm order-2 md:col-start-2">
+<div class="font-label-mono text-label-mono text-on-surface-variant mb-2">July 2025 — Present</div>
+<h3 class="font-headline-md text-headline-md text-primary mb-1">IEEE Eta Kappa Nu (HKN) Student Member</h3>
+<p class="font-body-md text-body-md text-secondary-container font-semibold mb-stack-md underline decoration-2 underline-offset-4">IEEE-Eta Kappa Nu</p>
+<div class="flex gap-2 flex-wrap">
+<span class="px-3 py-1 border border-outline-variant rounded-full font-label-mono text-label-mono bg-surface-container">ACADEMIC EXCELLENCE</span>
+<span class="px-3 py-1 border border-outline-variant rounded-full font-label-mono text-label-mono bg-surface-container">ENGINEERING LEADERSHIP</span>
+</div>
+</div>
+<!-- Center Point -->
+<div class="absolute left-0 md:left-1/2 w-4 h-4 bg-primary border-4 border-background rounded-full -translate-x-1/2 mt-3 z-10 hidden md:block"></div>
+<div class="order-1 md:pr-12">
+<div class="glass-panel p-stack-lg rounded-xl hover:border-secondary-container/50 transition-colors">
+<div class="flex justify-between items-start mb-stack-md">
+<span class="material-symbols-outlined text-secondary-container text-4xl" data-icon="memory">memory</span>
+<span class="font-label-mono text-label-mono text-outline">TYPE: MANAGEMENT</span>
+</div>
+<ul class="space-y-stack-md text-on-surface-variant">
+<li class="flex gap-stack-sm">
+<span class="material-symbols-outlined text-primary text-sm mt-1" data-icon="arrow_forward">arrow_forward</span>
+<span>Recognized as one among the Top 18 students across 2000+ students for academic excellence, leadership, and commitment to engineering.</span>
+</li>
+<li class="flex gap-stack-sm">
+<span class="material-symbols-outlined text-primary text-sm mt-1" data-icon="arrow_forward">arrow_forward</span>
+<span>Participating in professional development and technical collaboration initiatives.</span>
+</li>
+<li class="flex gap-stack-sm">
+<span class="material-symbols-outlined text-primary text-sm mt-1" data-icon="arrow_forward">arrow_forward</span>
+<span>Engaging in activities promoting innovation, ethics, and engineering advancement.</span>
+</li>
+</ul>
+</div>
+</div>
+</div>
+
+
+<!-- Role 3 -->
+<div class="relative grid md:grid-cols-2 gap-gutter mb-stack-xl">
+<div class="md:text-right md:pr-12 pt-stack-sm order-2 md:order-1">
+<div class="font-label-mono text-label-mono text-on-surface-variant mb-2">December 2025 — January 2026</div>
+<h3 class="font-headline-md text-headline-md text-primary mb-1">AI for Sustainability Intern</h3>
+<p class="font-body-md text-body-md text-secondary-container font-semibold mb-stack-md underline decoration-2 underline-offset-4">1M1B (1 Million for 1 Billion)</p>
+<div class="flex md:justify-end gap-2 flex-wrap">
+<span class="px-3 py-1 border border-outline-variant rounded-full font-label-mono text-label-mono bg-surface-container">AI SYSTEMS</span>
+<span class="px-3 py-1 border border-outline-variant rounded-full font-label-mono text-label-mono bg-surface-container">SUSTAINABILITY</span>
+</div>
+</div>
+<!-- Center Point -->
+<div class="absolute left-0 md:left-1/2 w-4 h-4 bg-primary border-4 border-background rounded-full -translate-x-1/2 mt-3 z-10 hidden md:block"></div>
+<div class="order-1 md:order-2 md:pl-12">
+<div class="glass-panel p-stack-lg rounded-xl hover:border-secondary-container/50 transition-colors">
+<div class="flex justify-between items-start mb-stack-md">
+<span class="material-symbols-outlined text-secondary-container text-4xl" data-icon="settings_input_component">settings_input_component</span>
+<span class="font-label-mono text-label-mono text-outline">TYPE: SOFTWARE</span>
+</div>
+<ul class="space-y-stack-md text-on-surface-variant">
+<li class="flex gap-stack-sm">
+<span class="material-symbols-outlined text-primary text-sm mt-1" data-icon="arrow_forward">arrow_forward</span>
+<span>Worked on AI-driven sustainability initiatives and collaborative innovation-focused programs.</span>
+</li>
+<li class="flex gap-stack-sm">
+<span class="material-symbols-outlined text-primary text-sm mt-1" data-icon="arrow_forward">arrow_forward</span>
+<span>Explored practical AI applications for solving socially impactful challenges.</span>
+</li>
+</ul>
+</div>
+</div>
+</div>
+
+<!-- Role 4 -->
+<div class="relative grid md:grid-cols-2 gap-gutter mb-stack-xl">
+  <div class="md:pl-12 pt-stack-sm order-2 md:col-start-2">
+  <div class="font-label-mono text-label-mono text-on-surface-variant mb-2">January 2025 — December 2025</div>
+  <h3 class="font-headline-md text-headline-md text-primary mb-1">Treasurer</h3>
+  <p class="font-body-md text-body-md text-secondary-container font-semibold mb-stack-md underline decoration-2 underline-offset-4">IEEE Circuits and Systems Society (CASS)</p>
+  <div class="flex gap-2 flex-wrap">
+  <span class="px-3 py-1 border border-outline-variant rounded-full font-label-mono text-label-mono bg-surface-container">FINANCIAL MANAGEMENT</span>
+  <span class="px-3 py-1 border border-outline-variant rounded-full font-label-mono text-label-mono bg-surface-container">EVENT COORDINATION</span>
+  </div>
+  </div>
+  <!-- Center Point -->
+  <div class="absolute left-0 md:left-1/2 w-4 h-4 bg-primary border-4 border-background rounded-full -translate-x-1/2 mt-3 z-10 hidden md:block"></div>
+  <div class="order-1 md:pr-12">
+  <div class="glass-panel p-stack-lg rounded-xl hover:border-secondary-container/50 transition-colors">
+  <div class="flex justify-between items-start mb-stack-md">
+  <span class="material-symbols-outlined text-secondary-container text-4xl" data-icon="memory">memory</span>
+  <span class="font-label-mono text-label-mono text-outline">TYPE: MANAGEMENT</span>
+
+  </div>
+  <ul class="space-y-stack-md text-on-surface-variant">
+  <li class="flex gap-stack-sm">
+  <span class="material-symbols-outlined text-primary text-sm mt-1" data-icon="arrow_forward">arrow_forward</span>
+  <span>Managed budgeting, sponsorship coordination, and financial operations for workshops, competitions, and technical events.</span>
+  </li>
+  <li class="flex gap-stack-sm">
+  <span class="material-symbols-outlined text-primary text-sm mt-1" data-icon="arrow_forward">arrow_forward</span>
+  <span>Strengthened leadership, communication, and operational management through technical society administration.</span>
+  </li>
+  </ul>
+  </div>
+  </div>
+  </div>
+
+
+<!-- Role 5 -->
+<div class="relative grid md:grid-cols-2 gap-gutter mb-stack-xl">
+  <div class="md:text-right md:pr-12 pt-stack-sm order-2 md:order-1">
+  <div class="font-label-mono text-label-mono text-on-surface-variant mb-2">July 2025 — August 2025</div>
+  <h3 class="font-headline-md text-headline-md text-primary mb-1">Frontend Developer Intern</h3>
+  <p class="font-body-md text-body-md text-secondary-container font-semibold mb-stack-md underline decoration-2 underline-offset-4">VZYNC STUDIOS</p>
+  <div class="flex md:justify-end gap-2 flex-wrap">
+  <span class="px-3 py-1 border border-outline-variant rounded-full font-label-mono text-label-mono bg-surface-container">WEB DEVELOPMENT</span>
+  <span class="px-3 py-1 border border-outline-variant rounded-full font-label-mono text-label-mono bg-surface-container">UI/UX IMPLEMENTATION</span>
+  </div>
+  </div>
+  <!-- Center Point -->
+  <div class="absolute left-0 md:left-1/2 w-4 h-4 bg-primary border-4 border-background rounded-full -translate-x-1/2 mt-3 z-10 hidden md:block"></div>
+  <div class="order-1 md:order-2 md:pl-12">
+  <div class="glass-panel p-stack-lg rounded-xl hover:border-secondary-container/50 transition-colors">
+  <div class="flex justify-between items-start mb-stack-md">
+  <span class="material-symbols-outlined text-secondary-container text-4xl" data-icon="settings_input_component">settings_input_component</span>
+  <span class="font-label-mono text-label-mono text-outline">TYPE: SOFTWARE</span>
+  </div>
+  <ul class="space-y-stack-md text-on-surface-variant">
+  <li class="flex gap-stack-sm">
+  <span class="material-symbols-outlined text-primary text-sm mt-1" data-icon="arrow_forward">arrow_forward</span>
+  <span>Improved frontend responsiveness, layout optimization, and user experience across modern web interfaces.</span>
+  </li>
+  <li class="flex gap-stack-sm">
+  <span class="material-symbols-outlined text-primary text-sm mt-1" data-icon="arrow_forward">arrow_forward</span>
+  <span>Developed responsive web interfaces using WordPress, HTML, CSS, and JavaScript.</span>
+  </li>
+  </ul>
+  </div>
+  </div>
+  </div>
+
+  
+<!-- Role 6 -->
+<div class="relative grid md:grid-cols-2 gap-gutter mb-stack-xl">
+  <div class="md:pl-12 pt-stack-sm order-2 md:col-start-2">
+  <div class="font-label-mono text-label-mono text-on-surface-variant mb-2">June 2025 — July 2025</div>
+  <h3 class="font-headline-md text-headline-md text-primary mb-1">Junior R&D Intern</h3>
+  <p class="font-body-md text-body-md text-secondary-container font-semibold mb-stack-md underline decoration-2 underline-offset-4">HeptaG Solutions Private Limited</p>
+  <div class="flex gap-2 flex-wrap">
+  <span class="px-3 py-1 border border-outline-variant rounded-full font-label-mono text-label-mono bg-surface-container">BIOMEDICAL R&D</span>
+  <span class="px-3 py-1 border border-outline-variant rounded-full font-label-mono text-label-mono bg-surface-container">EMBEDDED SYSTEMS</span>
+  </div>
+  </div>
+  <!-- Center Point -->
+  <div class="absolute left-0 md:left-1/2 w-4 h-4 bg-primary border-4 border-background rounded-full -translate-x-1/2 mt-3 z-10 hidden md:block"></div>
+  <div class="order-1 md:pr-12">
+  <div class="glass-panel p-stack-lg rounded-xl hover:border-secondary-container/50 transition-colors">
+  <div class="flex justify-between items-start mb-stack-md">
+  <span class="material-symbols-outlined text-secondary-container text-4xl" data-icon="memory">memory</span>
+  <span class="font-label-mono text-label-mono text-outline">TYPE: CORE</span>
+
+  </div>
+  <ul class="space-y-stack-md text-on-surface-variant">
+  <li class="flex gap-stack-sm">
+  <span class="material-symbols-outlined text-primary text-sm mt-1" data-icon="arrow_forward">arrow_forward</span>
+  <span>Contributed to the development of a non-invasive glucose monitoring device focused on accessible healthcare innovation by accessing 6+ Glucose monitoring techniques. </span>
+  </li>
+  <li class="flex gap-stack-sm">
+  <span class="material-symbols-outlined text-primary text-sm mt-1" data-icon="arrow_forward">arrow_forward</span>
+  <span>Gained practical exposure to healthcare technology development, R&D methodologies, and engineering problem-solving.</span>
+  </li>
+  </ul>
+  </div>
+  </div>
+  </div>
+
+
+
+
+</section>
+<!-- Engineering Metrics Section -->
+<section class="mt-stack-xl">
+<h2 class="font-headline-lg text-headline-lg text-primary mb-stack-lg border-l-4 border-secondary-container pl-stack-md">Performance Indices</h2>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-gutter">
+<div class="bg-surface-container-low p-stack-lg border border-outline-variant rounded-lg">
+<div class="font-display-lg text-display-lg text-secondary-container mb-stack-xs">25+</div>
+<div class="font-label-mono text-label-mono text-outline uppercase tracking-widest">TECHNICAL & LEADERSHIP ROLES</div>
+</div>
+<div class="bg-surface-container-low p-stack-lg border border-outline-variant rounded-lg">
+<div class="font-display-lg text-display-lg text-secondary-container mb-stack-xs">3+</div>
+<div class="font-label-mono text-label-mono text-outline uppercase tracking-widest">INTERNSHIPS & R&D EXPERIENCES</div>
+</div>
+<div class="bg-surface-container-low p-stack-lg border border-outline-variant rounded-lg">
+<div class="font-display-lg text-display-lg text-secondary-container mb-stack-xs">AI + EMBEDDED</div>
+<div class="font-label-mono text-label-mono text-outline uppercase tracking-widest">CORE ENGINEERING FOCUS</div>
+</div>
+</div>
+</section>
+<!-- Tech Stack Visualized -->
+<section class="mt-stack-xl bg-surface-container-lowest p-stack-xl rounded-2xl border border-outline-variant/30 overflow-hidden relative">
+<div class="absolute top-0 right-0 p-stack-md opacity-20">
+<span class="material-symbols-outlined text-[120px] text-primary" data-icon="terminal">terminal</span>
+</div>
+<div class="relative z-10">
+<h3 class="font-headline-md text-headline-md text-primary mb-stack-md">Core Competencies</h3>
+<div class="grid grid-cols-2 md:grid-cols-4 gap-stack-md">
+<div class="flex items-center gap-stack-sm group">
+<span class="w-1.5 h-1.5 rounded-full bg-secondary-container group-hover:scale-150 transition-transform"></span>
+<span class="font-body-md text-on-surface-variant">Embedded C/C++</span>
+</div>
+<div class="flex items-center gap-stack-sm group">
+<span class="w-1.5 h-1.5 rounded-full bg-secondary-container group-hover:scale-150 transition-transform"></span>
+<span class="font-body-md text-on-surface-variant">VLSI</span>
+</div>
+<div class="flex items-center gap-stack-sm group">
+<span class="w-1.5 h-1.5 rounded-full bg-secondary-container group-hover:scale-150 transition-transform"></span>
+<span class="font-body-md text-on-surface-variant">FPGA - Verilog Progamming</span>
+</div>
+<div class="flex items-center gap-stack-sm group">
+<span class="w-1.5 h-1.5 rounded-full bg-secondary-container group-hover:scale-150 transition-transform"></span>
+<span class="font-body-md text-on-surface-variant">Python/C/C++/Java</span>
+</div>
+<div class="flex items-center gap-stack-sm group">
+<span class="w-1.5 h-1.5 rounded-full bg-secondary-container group-hover:scale-150 transition-transform"></span>
+<span class="font-body-md text-on-surface-variant">Research & Development </span>
+</div>
+<div class="flex items-center gap-stack-sm group">
+<span class="w-1.5 h-1.5 rounded-full bg-secondary-container group-hover:scale-150 transition-transform"></span>
+<span class="font-body-md text-on-surface-variant">Leadership & Coordination  </span>
+</div>
+<div class="flex items-center gap-stack-sm group">
+<span class="w-1.5 h-1.5 rounded-full bg-secondary-container group-hover:scale-150 transition-transform"></span>
+<span class="font-body-md text-on-surface-variant">Risk Mitigation</span>
+</div>
+<div class="flex items-center gap-stack-sm group">
+<span class="w-1.5 h-1.5 rounded-full bg-secondary-container group-hover:scale-150 transition-transform"></span>
+<span class="font-body-md text-on-surface-variant">Systems Integration</span>
+</div>
+<div class="flex items-center gap-stack-sm group">
+  <span class="w-1.5 h-1.5 rounded-full bg-secondary-container group-hover:scale-150 transition-transform"></span>
+  <span class="font-body-md text-on-surface-variant">HTML/CSS/JavaScript</span>
+  </div>
+<div class="flex items-center gap-stack-sm group">
+<span class="w-1.5 h-1.5 rounded-full bg-secondary-container group-hover:scale-150 transition-transform"></span>
+<span class="font-body-md text-on-surface-variant">Event Management</span>
+</div>
+</div>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="w-full border-t border-outline-variant bg-surface-container-lowest py-stack-xl">
+<div class="max-w-7xl mx-auto px-margin-desktop flex flex-col md:flex-row justify-between items-center gap-gutter">
+<div class="font-headline-md text-headline-md text-primary">SARAVANAN R K</div>
+<p class="font-body-md text-body-md font-label-mono text-label-mono text-on-surface-variant">© 2024 Saravanan R K. Engineered for Excellence.</p>
+<div class="flex gap-stack-md">
+<a class="text-on-surface-variant hover:text-secondary-container transition-all hover:translate-y-[-2px]" href="https://www.linkedin.com/in/saravanan-rk/" target="_blank">LinkedIn</a>
+<a class="text-on-surface-variant hover:text-secondary-container transition-all hover:translate-y-[-2px]" href="#">GitHub</a>
+<a class="text-on-surface-variant hover:text-secondary-container transition-all hover:translate-y-[-2px]" href="#">ResearchGate</a>
+<a class="text-on-surface-variant hover:text-secondary-container transition-all hover:translate-y-[-2px]" href="mailto:rks17102005@gmail.com">Email</a>
+</div>
+</div>
+</footer>
+</body></html>
