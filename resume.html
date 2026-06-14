@@ -126,23 +126,26 @@
   <body class="bg-background text-on-background selection:bg-secondary-container selection:text-white">
     <!-- Top Navigation Bar -->
     <nav class="fixed top-4 left-1/2 -translate-x-1/2 w-[90%] max-w-7xl rounded-full bg-surface/80 dark:bg-surface/80 backdrop-blur-xl border border-white/10 shadow-[0_0_15px_rgba(59,130,246,0.1)] z-50 flex justify-between items-center px-8 py-4">
-      <div class="font-display-lg text-[24px] text-primary tracking-tighter">
+      <div class="font-display-lg text-display-lg-mobile text-primary tracking-tighter">
         SARAVANAN R K
       </div>
       <div class="hidden md:flex gap-8 items-center">
-        <a class="text-on-surface-variant font-medium hover:text-primary transition-all duration-300 hover:scale-105" href="#">
-          Projects
-        </a>
-        <a class="text-on-surface-variant font-medium hover:text-primary transition-all duration-300 hover:scale-105" href="#">
-          Experience
-        </a>
-        <a class="text-on-surface-variant font-medium hover:text-primary transition-all duration-300 hover:scale-105" href="#">
-          Labs
-        </a>
-        <a class="text-on-surface-variant font-medium hover:text-primary transition-all duration-300 hover:scale-105" href="#">
+         <a class="text-on-surface-variant font-medium hover:text-primary transition-all duration-300 hover:scale-105" href="about.html">
           About
         </a>
-        <a class="text-on-surface-variant font-medium hover:text-primary transition-all duration-300 hover:scale-105" href="#">
+        <a class="text-on-surface-variant font-medium hover:text-primary transition-all duration-300 hover:scale-105" href="projects.html">
+          Projects
+        </a>
+        <a class="text-on-surface-variant font-medium hover:text-primary transition-all duration-300 hover:scale-105" href="experience.html">
+          Experience
+        </a>
+        <a class="text-on-surface-variant font-medium hover:text-primary transition-all duration-300 hover:scale-105" href="skills.html">
+          Skills
+        </a>
+        <a class="text-primary font-bold border-b-2 border-primary pb-1 hover:text-primary transition-all duration-300 hover:scale-105" href="resume.html">
+          Resume
+        </a>
+        <a class="text-on-surface-variant font-medium hover:text-primary transition-all duration-300 hover:scale-105" href="contact.html">
           Contact
         </a>
       </div>
@@ -168,28 +171,67 @@
           </p>
         </div>
         <!-- Download CTA -->
-        <button class="w-full bg-primary text-on-primary py-5 rounded-lg font-headline-md text-headline-md flex items-center justify-center gap-3 hover:bg-on-surface transition-colors shadow-lg group">
-          <span class="material-symbols-outlined">
-            download
-          </span>
-          <a href="New Resume .pdf" download>Download Resume</a>
+        <button class="w-full bg-primary text-on-primary py-5 rounded-lg font-headline-md text-headline-lg flex items-center justify-center gap-3 hover:bg-on-surface transition-colors shadow-lg group">
+          <span class="material-symbols-outlined">handshake</span>
+          <a href="https://www.linkedin.com/in/saravanan-r-k" target="_blank" rel="noopener noreferrer">Get in touch</a>
 
-          <span class="font-label-mono text-[10px] opacity-70 group-hover:opacity-100 transition-opacity">
-            PDF | 2.4 MB
-          </span>
         </button>
         <!-- Technical Highlights -->
         <div class="glass-panel p-stack-lg rounded-xl flex flex-col gap-stack-md">
           <h3 class="font-label-mono text-label-mono text-outline uppercase tracking-[0.2em]">
             Technical Stack
           </h3>
+          <!-- SKILL PROGRESS BAR -->
+<div class="w-full max-w-xl space-y-6">
+
+  <!-- Skill 1 -->
+  <div>
+    <div class="flex justify-between mb-2 font-mono text-sm text-on-surface-variant">
+      <span>VLSI / RTL Design</span>
+      <span class="text-secondary-container">90%</span>
+    </div>
+
+    <div class="h-3 w-full bg-surface-container-high rounded-full border border-outline-variant overflow-hidden">
+      <div class="h-full bg-secondary-container rounded-full transition-all duration-1000 ease-out w-[90%]"></div>
+    </div>
+  </div>
+
+  <!-- Skill 2 -->
+  <div>
+    <div class="flex justify-between mb-2 font-mono text-sm text-on-surface-variant">
+      <span>Embedded Systems</span>
+      <span class="text-secondary-container">85%</span>
+    </div>
+
+    <div class="h-3 w-full bg-surface-container-high rounded-full border border-outline-variant overflow-hidden">
+      <div class="h-full bg-secondary-container rounded-full transition-all duration-1000 ease-out w-[85%]"></div>
+    </div>
+  </div>
+
+  <!-- Skill 3 -->
+  <div>
+    <div class="flex justify-between mb-2 font-mono text-sm text-on-surface-variant">
+      <span>AI / Agentic Systems</span>
+      <span class="text-secondary-container">92%</span>
+    </div>
+
+    <div class="h-3 w-full bg-surface-container-high rounded-full border border-outline-variant overflow-hidden">
+      <div class="h-full bg-secondary-container rounded-full transition-all duration-1000 ease-out w-[92%]"></div>
+    </div>
+  </div>
+
+</div>
+
+
+
+
           <div class="grid grid-cols-2 gap-stack-sm">
             <div class="flex flex-col p-stack-sm border border-outline-variant/30 rounded">
               <span class="font-label-mono text-primary text-[10px] mb-1">
                 LANGUAGES
               </span>
               <span class="font-body-md text-on-surface text-sm">
-                C++, Rust, Python
+                C++, Java, Python
               </span>
             </div>
             <div class="flex flex-col p-stack-sm border border-outline-variant/30 rounded">
@@ -197,7 +239,7 @@
                 HARDWARE
               </span>
               <span class="font-body-md text-on-surface text-sm">
-                FPGA, ARM, RISC-V
+                Arduino, ESP32, Raspberry Pi
               </span>
             </div>
             <div class="flex flex-col p-stack-sm border border-outline-variant/30 rounded">
@@ -205,7 +247,7 @@
                 TOOLS
               </span>
               <span class="font-body-md text-on-surface text-sm">
-                Docker, RTOS, Altium
+                Xilinx Vivado, QNX RTOS, Git, GitHub, VS Code, Proteus, CST Studio
               </span>
             </div>
             <div class="flex flex-col p-stack-sm border border-outline-variant/30 rounded">
@@ -213,7 +255,7 @@
                 AREAS
               </span>
               <span class="font-body-md text-on-surface text-sm">
-                IoT, Robotics, DSP
+                VLSI, IoT, Embedded Systems, AI, Software Development
               </span>
             </div>
           </div>
@@ -239,9 +281,28 @@
                 <p class="font-body-md text-on-surface-variant text-sm">
                   Sri Sairam Engineering College • 2023 - 2027
                 </p>
+                <br>
+                <p class="font-headline-md text-primary text-lg">
+                  HSLC
+                </p>
+                <p class="font-body-md text-on-surface-variant text-sm">
+                  Daniel Thomas Matriclation Higher Secondary School • 2022 - 2023
+                </p>
+
+                <br>
+                <p class="font-headline-md text-primary text-lg">
+                  SSLC
+                </p>
+                <p class="font-body-md text-on-surface-variant text-sm">
+                  Daniel Thomas Matriclation Higher Secondary School • 2020 - 2021
+                </p>
+
               </div>
             </div>
           </div>
+
+
+          
           <div class="glass-panel p-stack-lg rounded-xl relative overflow-hidden group">
             <div class="absolute top-0 right-0 p-3">
               <span class="material-symbols-outlined text-outline/30 text-4xl">
@@ -285,7 +346,7 @@
             <div class="h-6 w-[1px] bg-outline-variant mx-2">
             </div>
             <span class="font-label-mono text-label-sm text-on-surface-variant">
-              Saravanan R K - CV.pdf
+              Saravanan R K - Resume.pdf
             </span>
           </div>
           <div class="flex items-center gap-4">
@@ -313,21 +374,7 @@
           <div class="p-12 h-full flex flex-col">
             <img alt="Resume Preview" class="w-full h-full object-cover opacity-90" data-alt="A professional high-resolution close-up of a minimalist resume layout on premium white paper. The document features clean grid lines, sophisticated sans-serif typography in deep charcoal, and subtle blue architectural accents. The lighting is bright and studio-quality, emphasizing the texture of the heavy cardstock and the precision of the technical layout. The overall aesthetic is one of corporate excellence and engineering rigor." src="Resume.png"/>
             <!-- Overlay Interaction for Preview -->
-            <div class="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity bg-black/40 backdrop-blur-sm">
-              <div class="flex flex-col items-center gap-stack-md text-center px-6">
-                <span class="material-symbols-outlined text-6xl text-primary">
-                  visibility
-                </span>
-                <div>
-                  <h4 class="font-headline-md text-primary">
-                    Interactive Preview
-                  </h4>
-                  <p class="font-body-md text-on-surface-variant">
-                    Click to open full-screen document viewer
-                  </p>
-                </div>
-              </div>
-            </div>
+           
           </div>
         </div>
         <div class="flex justify-between items-center px-4">
